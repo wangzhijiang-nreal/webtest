@@ -6,46 +6,88 @@
         <style>
             .grid-container {
                 display: grid;
-                grid-column-gap: 20px;
-                grid-row-gap: 20px;
+                grid-column-gap: 10px;
+                grid-row-gap: 10px;
+                grid-template-columns: repeat(4, 1fr);
             }
         </style>
     </head>
     <body>
-        <div class="grid-container">
-            <!-- <div> -->
-                <button id="1" onclick="onClick(this.id)" style="height:25px;width:100px">
-                    Button 1
+        <div class="grid-container" id="button_group">
+            <div class="grid-item">
+                <button id="0" onclick="onClick(this)" style="height:12.5px;width:100px">
+                    0
                 </button>
-                <button id="2" onclick="onClick(this.id)" style="height:50px;width:100px">
-                    Button 2
+            </div>
+            <div class="grid-item">
+                <button id="1" onclick="onClick(this)" style="height:25px;width:100px">
+                    1
                 </button>
-                <button id="3" onclick="onClick(this.id)" style="height:75px;width:100px">
-                    Button 3
+            </div>
+            <div class="grid-item">
+                <button id="2" onclick="onClick(this)" style="height:50px;width:100px">
+                   2
                 </button>
-                <button id="4" onclick="onClick(this.id)" style="height:100px;width:100px">
-                    Button 4
+            </div>
+            <div class="grid-item">
+                <button id="3" onclick="onClick(this)" style="height:75px;width:100px">
+                    3
                 </button>
-            <!-- </div>
-            <div> -->
-                <button id="5" onclick="onClick(this.id)" style="height:25px;width:25px">
-                    Button 5
+            </div>
+            <div class="grid-item">
+                <button id="4" onclick="onClick(this)" style="height:12.5px;width:25px">
+                    4
                 </button>
-                <button id="6" onclick="onClick(this.id)" style="height:50px;width:50px">
-                    Button 6
+            </div>
+            <div class="grid-item">
+                <button id="5" onclick="onClick(this)" style="height:25px;width:25px">
+                    5
                 </button>
-                <button id="7" onclick="onClick(this.id)" style="height:75px;width:75px">
-                    Button 7
+            </div>
+            <div class="grid-item">
+                <button id="6" onclick="onClick(this)" style="height:50px;width:50px">
+                    6
                 </button>
-                <button id="8" onclick="onClick(this.id)" style="height:100px;width:100px">
-                    Button 8
+            </div>
+            <div class="grid-item">
+                <button id="7" onclick="onClick(this)" style="height:75px;width:75px">
+                    7
                 </button>
-        <!-- </div> -->
+            </div>
+            <div class="grid-item">
+                <button id="8" onclick="onClick(this)" style="height:10px;width:10px">
+                    8
+                </button>
+            </div>
+            <div class="grid-item">
+                <button id="9" onclick="onClick(this)" style="height:20px;width:20px">
+                    9
+                </button>
+            </div>
+            <div class="grid-item">
+                <button id="10" onclick="onClick(this)" style="height:30px;width:30px">
+                    10
+                </button>
+            </div>
+            <div class="grid-item">
+                <button id="11" onclick="onClick(this)" style="height:40px;width:40px">
+                    11
+                </button>
+            </div>
+            <div class="grid-item">
+                <button id="12" onclick="onClick(this)" style="height:5px;width:5px">
+                    12
+                </button>
+            </div>
         </div>
+        <p id="message">
+
+        </p>
     </body>
     <script type="text/javascript">
-        function onClick(elementId) {
-            alert("Button " + elementId + " clicked");
+        function onClick(element) {
+            var msg = document.getElementById("message");
+            msg.textContent = "clicked: " + element.id;
         }
     </script>
 </html>
