@@ -1,108 +1,812 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Nreal Test</title>
-        <style>
-            .grid-container {
-                display: grid;
-                grid-column-gap: 10px;
-                grid-row-gap: 10px;
-                grid-template-columns: repeat(4, 1fr);
-            }
-            .grid-item button {
-                background-color: lightskyblue;
-            }
-        </style>
-    </head>
-    <body>
-        <div class="grid-container" id="button_group">
-            <div class="grid-item">
-                <button id="0" onclick="onClick(this)" style="height:12.5px;width:100px">
-                    0
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="1" onclick="onClick(this)" style="height:25px;width:100px">
-                    1
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="2" onclick="onClick(this)" style="height:50px;width:100px">
-                   2
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="3" onclick="onClick(this)" style="height:75px;width:100px">
-                    3
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="4" onclick="onClick(this)" style="height:12.5px;width:25px">
-                    4
-                </button>
-            </div>
-            <div class="grid-item">
-                
-                    <button id="5" onclick="onClick(this)" style="height:25px;width:25px">
-                        5
-                    </button>
-
-                    <button id="5" onclick="onClick(this)" style="height:20px;width:20px;position:relative;left:40px">
-                        5B
-                    </button>
-                    <button id="5" onclick="onClick(this)" style="height:15px;width:15px;position:relative;left:80px">
-                        5C
-                    </button>
-                    <button id="4" onclick="onClick(this)" style="height:12.5px;width:25px;position:relative;left:120px">
-                        5D
-                    </button>
-            </div>
-            <div class="grid-item">
-                <button id="6" onclick="onClick(this)" style="height:50px;width:50px">
-                    6
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="7" onclick="onClick(this)" style="height:75px;width:75px">
-                    7
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="8" onclick="onClick(this)" style="height:10px;width:10px">
-                    8
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="9" onclick="onClick(this)" style="height:20px;width:20px">
-                    9
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="10" onclick="onClick(this)" style="height:30px;width:30px">
-                    10
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="11" onclick="onClick(this)" style="height:40px;width:40px">
-                    11
-                </button>
-            </div>
-            <div class="grid-item">
-                <button id="12" onclick="onClick(this)" style="height:5px;width:5px">
-                    12
-                </button>
-            </div>
-        </div>
-        
-        <p id="message">
-
-        </p>
-    </body>
-    <script type="text/javascript">
-        function onClick(element) {
-            var msg = document.getElementById("message");
-            msg.textContent = "clicked: " + element.textContent;
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>网页测试工具</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
         }
-    </script>
+        .father {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            font-size: 5px;
+            margin-left: 28px;
+        }
+        .son {
+            margin-top: 30px;
+        }
+        .btn1 {
+            width: 40px;
+            height: 30px;
+            /* margin-left: 15px; */
+            margin-right: 5px;
+        }
+        .btn2 {
+            width: 30px;
+            height: 20px;
+            margin-right: 5px;
+        }
+        .btn3 {
+            width: 20px;
+            height: 15px;
+            margin-right: 5px;
+        }
+        .btn4 {
+            width: 10px;
+            height: 10px;
+            text-align: center;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div>
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+      
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+       
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+
+            <!-- <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button> -->
+        </div>
+
+        <div class="son">
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+       
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <!-- <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button> -->
+        </div>
+
+        <div class="son">
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+      
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+       
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+      
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <!-- <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button> -->
+        </div>
+
+        <div class="son">
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+       
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <!-- <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button> -->
+        </div>
+
+        <div class="son">
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+      
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+       
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+      
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <!-- <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button> -->
+        </div>
+
+        <div class="son">
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+       
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <!-- <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button> -->
+        </div>
+
+        <div class="son">
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+      
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+       
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+      
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <!-- <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button> -->
+        </div>
+
+        <div class="son">
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+       
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <!-- <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button> -->
+        </div>
+
+        <div class="son">
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+      
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+       
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+      
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <!-- <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button> -->
+        </div>
+
+        <div class="son">
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+       
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <!-- <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button> -->
+        </div>
+
+        <div class="son">
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+      
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+       
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+      
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button>
+        
+            <!-- <button class="btn1">1</button>
+            <button class="btn2">2</button>
+            <button class="btn3">3</button>
+            <button class="btn4">4</button> -->
+        </div>
+
+        <div class="son">
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+       
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+      
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button>
+        
+            <!-- <button class="btn4">1</button>
+            <button class="btn3">2</button>
+            <button class="btn2">3</button>
+            <button class="btn1">4</button> -->
+        </div>
+    </div>
+    
+</body>
+<script>
+    var btn = document.getElementsByTagName('button')
+    
+    console.log(btn)
+    for (i=0;i<btn.length;i++) {
+        btn[i].onmousedown = function () {
+            this.style.backgroundColor = "red"
+        }
+    }
+    for (i=0;i<btn.length;i++) {
+        btn[i].onmouseup = function () {
+            this.style.backgroundColor = "green"
+        }
+    }
+    // window.onload = function () {
+    //     console.log('window被加载了')
+    // }
+</script>
 </html>
