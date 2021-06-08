@@ -817,17 +817,16 @@
 </body>
 <script>
     var btn = document.getElementsByTagName('button')
-    
-    console.log(btn)
     for (i=0;i<btn.length;i++) {
-        btn[i].onmousedown = function () {
+        btn[i].addEventListener('touchend',function () {
             this.style.backgroundColor = "red"
-        }
+            console.log(123)
+        })
     }
     for (i=0;i<btn.length;i++) {
-        btn[i].onmouseup = function () {
+        btn[i].addEventListener('mouseup',function () {
             this.style.backgroundColor = ""
-        }
+        })
     }
 </script>
 </html>
