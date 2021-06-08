@@ -818,8 +818,9 @@
 <script>
     var btn = document.getElementsByTagName('button')
     for (i=0;i<btn.length;i++) {
-        btn[i].addEventListener('mousedown',function () {
+        btn[i].addEventListener('touchend',function () {
             this.style.backgroundColor = "red"
+            console.log(123)
         })
     }
     for (i=0;i<btn.length;i++) {
