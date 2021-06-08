@@ -819,13 +819,13 @@
     var btn = document.getElementsByTagName('button')
     for (i=0;i<btn.length;i++) {
         btn[i].addEventListener('touchend',function () {
-            this.style.backgroundColor = "red"
+            this.style.backgroundColor = ""
             console.log(123)
         })
     }
     for (i=0;i<btn.length;i++) {
-        btn[i].addEventListener('mouseup',function () {
-            this.style.backgroundColor = ""
+        btn[i].addEventListener('touchstart',function () {
+            this.style.backgroundColor = "red"
         })
     }
 </script>
